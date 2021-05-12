@@ -4,7 +4,6 @@
     --bg-color: #7c7484;
     --accent-color: #f74e32;
     --main-text-color: #fff;
-    --main-text-color2: #b0a8b9;
 }
 
 *, *::before, *::after {
@@ -13,6 +12,7 @@
 body{
     margin: 0;
     background-color: var(--bg-color);
+    color: var(--main-text-color);
 }
 
 /*Header Section starts here*/
