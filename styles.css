@@ -1,0 +1,30 @@
+/*Universal Styles*/
+:root {
+    --main-color: #6c38c0;
+    --bg-color: #7c7484;
+    --accent-color: #f74e32;
+    --main-text-color: #fff;
+    --main-text-color2: #b0a8b9;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: var(--bg-color);
+}
+
+/*Header Section starts here*/
+header{
+    background-color: #6c38c0;
+}
+.icon img{
+    width: 25%;
+    border-radius: 10%;
+}
+
+/*Main Body Styles*/
+h1{
+    color: var(--main-text-color)
+}
