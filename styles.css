@@ -1,9 +1,12 @@
 /*Universal Styles*/
 :root {
-    --main-color: #6c38c0;
-    --bg-color: #3b383f;
-    --accent-color: #f74e32;
-    --main-text-color: #fff;
+    --main-color: rgb(108, 56, 192);
+    --banner-color: rgba(108, 56, 192, 80%); /*same as main color with alpha 80%*/
+    --bg-color: rgb(51, 51, 51);
+    --accent-color: rgb(247, 78, 50);
+    --main-text-color: rgb(255, 255, 255);
+    --card-outline: rgba(255, 255, 255, 30%); /*same as main text color with alpha 30%*/
+    --skill-bg: rgba(131, 130, 130, 0.5);
 }
 
 *, *::before, *::after {
@@ -23,11 +26,10 @@ body{
     color: var(--main-text-color);
 }
 
-/*Header Section starts here*/
+/*Header (nav bar) Section Styles*/
 header{
-    background-color: var(--main-color);
+    background-color: var(--banner-color);
     text-align: center;
-    /* position: fixed; */
     top: 0;
     z-index: 999;
     width: 100%;
@@ -81,9 +83,13 @@ nav li a{
     text-decoration: none;
     text-transform: uppercase;
 }
-/*Main Body Styles*/
+
+/*Page Common Styles*/
 h1{
     color: var(--main-text-color);
+    text-align: center;
+}
+h2{
     text-align: center;
 }
 .button{
@@ -98,13 +104,17 @@ h1{
 .button:focus{
     background-color: var(--accent-color);
 }
-
+p a {
+    color: var(--accent-color);
+}
+/*Project Page Styles*/
 /*Project Card Styles*/
 .card{
     padding: 10rem 0 0;
     max-width: 35ch;
     border-radius: .5em;
     overflow: hidden;
+    outline: 1px solid var(--card-outline);
 }
 .card-content{
     --padding: 1.5rem;
@@ -132,10 +142,10 @@ h1{
     margin: .8rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(315px,1fr));
-    grid-gap: .5rem;
+    column-gap: .5rem;
+    row-gap: 1rem;
     justify-items: center;
 }
-
 
 /*Individual Card Backgrounds*/
 #rpg-quest{
@@ -152,4 +162,37 @@ h1{
     background-image: url(./files/images/resize/DSC_0046_med.JPG);
     background-size: cover;
     background-position: center;
+}
+
+/*About Me Page Styles*/
+.about p{
+    margin: 1.5em;
+    text-align: justify;
+}
+/*Skill styles*/
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(115px,1fr));
+    grid-gap: .5rem;
+    justify-items: center;
+}
+.single-skill{
+    padding-top: 0.5em;
+    background-color: var(--skill-bg);
+    border-radius: 5px;
+    outline: 1px solid var(--banner-color);
+}
+.single-skill p{
+    margin-top: 0.5em;
+    text-align: center;
+}
+.icons8{
+    text-align: center;
+}
+/*Contact Styles*/
+.contact{
+    margin-top: 4rem;
+}
+.contact p{
+    text-align: center;
 }
