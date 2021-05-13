@@ -9,22 +9,108 @@
 *, *::before, *::after {
     box-sizing: border-box;
 }
-body{
+html, body{
     margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
     background-color: var(--bg-color);
     color: var(--main-text-color);
 }
 
 /*Header Section starts here*/
 header{
-    background-color: #6c38c0;
+    background-color: var(--main-color);
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0 1fr 4fr 0;
+}
+.icon{
+    grid-column: 2 / span 1;
 }
 .icon img{
-    width: 25%;
+    margin: 0.5em;
+    max-width: 100%;
+    height: auto;
     border-radius: 10%;
 }
-
+nav{
+    margin-right: 2em;
+    display: flex;
+    grid-column: 3 / span 1;
+    align-items: center;
+    justify-content: flex-end;
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+}
+nav li{
+    margin: 0 1em;
+}
+nav li a{
+    color: var(--main-text-color);
+    text-decoration: none;
+    text-transform: uppercase;
+}
 /*Main Body Styles*/
 h1{
-    color: var(--main-text-color)
+    margin-top: 3em;
+    color: var(--main-text-color);
+    text-align: center;
+}
+
+/*Project Card Styles*/
+.card{
+    padding: 10rem 0 0;
+    max-width: 35ch;
+    border-radius: .5em;
+    overflow: hidden;
+}
+.card-content{
+    --padding: 1.5rem;
+    padding: var(--padding);
+    background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.6) 20%, rgba(0,0,0,1));
+
+}
+.card-title{
+    position: relative;
+    width: max-content;
+}
+.card-title::after{
+    content: '';
+    position: absolute;
+    height: 3px;
+    left: calc(var(--padding) * -1);
+    bottom: 0;
+    width: calc(100% + var(--padding));
+    background: var(--main-color);
+}
+.card-body{
+    opacity: 90%;
+}
+.button{
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--main-text-color);
+    background-color: var(--main-color);
+    padding: 0.5em 1.25em;
+    border-radius: .25em;
+}
+.button:hover,
+.button:focus{
+    background-color: var(--accent-color);
+}
+/*Individual Card Backgrounds*/
+#rpg-quest{
+    background-image: url(./files/images/tim-rebkavets-B5PNmw5XSpk-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
 }
