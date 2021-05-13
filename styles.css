@@ -1,7 +1,7 @@
 /*Universal Styles*/
 :root {
     --main-color: #6c38c0;
-    --bg-color: #7c7484;
+    --bg-color: #3b383f;
     --accent-color: #f74e32;
     --main-text-color: #fff;
 }
@@ -15,7 +15,11 @@ html, body{
     font-family: sans-serif;
 }
 body{
+    background-image: url(./files/images/DSC_0040.JPG);
     background-color: var(--bg-color);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center;
     color: var(--main-text-color);
 }
 
@@ -23,7 +27,7 @@ body{
 header{
     background-color: var(--main-color);
     text-align: center;
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     z-index: 999;
     width: 100%;
@@ -35,7 +39,7 @@ header{
 }
 .icon img{
     margin: 0.5em;
-    max-width: 100%;
+    width: 75px;
     height: auto;
     border-radius: 10%;
 }
@@ -54,6 +58,23 @@ nav ul{
 }
 nav li{
     margin: 0 1em;
+    position: relative;
+}
+nav li::before,
+nav li::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: var(--accent-color);
+}
+nav li::before{
+    right: 0;
+    top: -0.25em;
+}
+nav li::after{
+    left: 0;
+    bottom: -0.25em;
 }
 nav li a{
     color: var(--main-text-color);
@@ -62,9 +83,20 @@ nav li a{
 }
 /*Main Body Styles*/
 h1{
-    margin-top: 3em;
     color: var(--main-text-color);
     text-align: center;
+}
+.button{
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--main-text-color);
+    background-color: var(--main-color);
+    padding: 0.5em 1.25em;
+    border-radius: .25em;
+}
+.button:hover,
+.button:focus{
+    background-color: var(--accent-color);
 }
 
 /*Project Card Styles*/
@@ -89,28 +121,35 @@ h1{
     position: absolute;
     height: 3px;
     left: calc(var(--padding) * -1);
-    bottom: 0;
+    bottom: -0.25em;
     width: calc(100% + var(--padding));
     background: var(--main-color);
 }
 .card-body{
     opacity: 90%;
 }
-.button{
-    cursor: pointer;
-    text-decoration: none;
-    color: var(--main-text-color);
-    background-color: var(--main-color);
-    padding: 0.5em 1.25em;
-    border-radius: .25em;
+.card-holder{
+    margin: .8rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(315px,1fr));
+    grid-gap: .5rem;
+    justify-items: center;
 }
-.button:hover,
-.button:focus{
-    background-color: var(--accent-color);
-}
+
+
 /*Individual Card Backgrounds*/
 #rpg-quest{
-    background-image: url(./files/images/tim-rebkavets-B5PNmw5XSpk-unsplash.jpg);
+    background-image: url(./files/images/resize/tim-rebkavets-B5PNmw5XSpk-unsplash_med.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#portfolio{
+    background-image: url(./files/images/resize/florian-olivo-4hbJ-eymZ1o-unsplash_med.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#placeholder{
+    background-image: url(./files/images/resize/DSC_0046_med.JPG);
     background-size: cover;
     background-position: center;
 }
