@@ -35,6 +35,7 @@ header{
     width: 100%;
     display: grid;
     grid-template-columns: 0 1fr 4fr 0;
+    min-height: 95px;
 }
 .icon{
     grid-column: 2 / span 1;
@@ -61,22 +62,6 @@ nav ul{
 nav li{
     margin: 0 1em;
     position: relative;
-}
-nav li::before,
-nav li::after{
-    content: '';
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    background-color: var(--accent-color);
-}
-nav li::before{
-    right: 0;
-    top: -0.25em;
-}
-nav li::after{
-    left: 0;
-    bottom: -0.25em;
 }
 nav li a{
     color: var(--main-text-color);
@@ -195,4 +180,106 @@ p a {
 }
 .contact p{
     text-align: center;
+}
+
+
+/*Full Size Desktop Styles*/
+@media screen and (min-width: 1050px) {
+    header{
+        grid-template-columns: 1fr 1fr 4fr 1fr;
+    }
+    .card-holder{
+        max-width: 1050px;
+        margin: 0.8rem auto;
+    }
+    .about{
+        max-width: 1050px;
+        margin: 1.5em auto;
+    }
+    .skills{
+        max-width: 1050px;
+        margin: 0.8rem auto;
+    }
+}
+/*Prefers Motion: no preference (defaults to no animations)*/
+@media (hover: hover) and (prefers-reduced-motion: no-preference){
+/*Nav Bar Highlights*/    
+    nav li::before,
+    nav li::after{
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background-color: var(--accent-color);
+    }
+    nav li::before{
+        right: 0;
+        top: -0.25em;
+    }
+    nav li::after{
+        left: 0;
+        bottom: -0.25em;
+    }
+    nav li::before,
+    nav li::after{
+        transform: scaleX(0);
+        transition: transform 500ms ease;
+    }
+    nav li:hover::before,
+    nav li:hover::after,
+    nav li:focus-within::before,
+    nav li:focus-within::after{
+        transform: scaleX(1);
+    }
+    nav li:nth-child(1)::before,
+    nav li:nth-child(1)::after{
+        transform-origin: right;
+    }
+    nav li:nth-child(2)::before,
+    nav li:nth-child(2)::after{
+        transform-origin: left;
+    }
+
+/*Project Card Animations*/
+    .card {
+        transition: transform 350ms ease;
+    }
+    .card:hover,
+    .card:focus-within{
+        transform: scale(1.05);
+    }
+    .card-title::after{
+        transform: scaleX(0);
+        transition: transform 350ms ease;
+        transition-delay: 500ms;
+        transform-origin: left;
+    }
+    .card:hover .card-title::after,
+    .card:focus-within .card-title::after{
+        transform: scaleX(1)
+    }
+    .card-content{
+        transform: translateY(65%);
+        transition: transform 350ms ease;
+    }
+    .card:hover .card-content,
+    .card:focus-within .card-content{
+        transform: translateY(0)
+    }
+    .card-body,
+    .card-content a{
+        opacity: 0;                
+        transition: opacity 350ms linear;
+    }
+    .card:hover .card-body,
+    .card:focus-within .card-body,
+    .card:hover .card-content a,
+    .card:focus-within .card-content a{
+        opacity: 1;
+        transition-delay: 500ms;
+    }
+    .card:focus-within .card-content{
+        transition-duration: 0ms;
+    }
+
 }
