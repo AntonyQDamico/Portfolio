@@ -1,4 +1,4 @@
-/*Universal Styles*/
+/*Color Variables*/
 :root {
     --main-color: rgb(108, 56, 192);
     --banner-color: rgba(108, 56, 192, 80%); /*same as main color with alpha 80%*/
@@ -9,6 +9,8 @@
     --skill-bg: rgba(131, 130, 130, 0.5);
 }
 
+
+/*Universal Styles*/
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -25,6 +27,7 @@ body{
     background-position: center;
     color: var(--main-text-color);
 }
+
 
 /*Header (nav bar) Section Styles*/
 header{
@@ -69,6 +72,7 @@ nav li a{
     text-transform: uppercase;
 }
 
+
 /*Page Common Styles*/
 h1{
     color: var(--main-text-color);
@@ -92,6 +96,8 @@ h2{
 p a {
     color: var(--accent-color);
 }
+
+
 /*Project Page Styles*/
 /*Project Card Styles*/
 .card{
@@ -132,6 +138,7 @@ p a {
     justify-items: center;
 }
 
+
 /*Individual Card Backgrounds*/
 #rpg-quest{
     background-image: url(./files/images/resize/tim-rebkavets-B5PNmw5XSpk-unsplash_med.jpg);
@@ -148,6 +155,7 @@ p a {
     background-size: cover;
     background-position: center;
 }
+
 
 /*About Me Page Styles*/
 .about p{
@@ -183,6 +191,7 @@ p a {
 }
 
 
+/*Non-Mobile Styles*/
 /*Full Size Desktop Styles*/
 @media screen and (min-width: 1050px) {
     header{
@@ -203,7 +212,7 @@ p a {
 }
 /*Prefers Motion: no preference (defaults to no animations)*/
 @media (hover: hover) and (prefers-reduced-motion: no-preference){
-/*Nav Bar Highlights*/    
+    /*Nav Bar Highlights*/    
     nav li::before,
     nav li::after{
         content: '';
@@ -239,8 +248,7 @@ p a {
     nav li:nth-child(2)::after{
         transform-origin: left;
     }
-
-/*Project Card Animations*/
+    /*Project Card Animations*/
     .card {
         transition: transform 350ms ease;
     }
@@ -283,3 +291,4 @@ p a {
     }
 
 }
+/*End Prefers Motion Section*/
