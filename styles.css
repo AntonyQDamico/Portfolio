@@ -1,294 +1,302 @@
 /*Color Variables*/
 :root {
-    --main-color: rgb(108, 56, 192);
-    --banner-color: rgba(108, 56, 192, 80%); /*same as main color with alpha 80%*/
-    --bg-color: rgb(51, 51, 51);
-    --accent-color: rgb(247, 78, 50);
-    --main-text-color: rgb(255, 255, 255);
-    --card-outline: rgba(255, 255, 255, 30%); /*same as main text color with alpha 30%*/
-    --skill-bg: rgba(131, 130, 130, 0.5);
+  --main-color: rgb(108, 56, 192);
+  --banner-color: rgba(108, 56, 192, 80%); /*same as main color with alpha 80%*/
+  --bg-color: rgb(51, 51, 51);
+  --accent-color: rgb(247, 78, 50);
+  --main-text-color: rgb(255, 255, 255);
+  --card-outline: rgba(
+    255,
+    255,
+    255,
+    30%
+  ); /*same as main text color with alpha 30%*/
+  --skill-bg: rgba(131, 130, 130, 0.5);
 }
-
 
 /*Universal Styles*/
-*, *::before, *::after {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-html, body{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
-body{
-    background-image: url(./files/images/DSC_0040.JPG);
-    background-color: var(--bg-color);
-    background-blend-mode: multiply;
-    background-repeat: no-repeat;
-    background-position: center;
-    color: var(--main-text-color);
+body {
+  background-image: url(./files/images/DSC_0040.JPG);
+  background-color: var(--bg-color);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: var(--main-text-color);
 }
-
 
 /*Header (nav bar) Section Styles*/
-header{
-    background-color: var(--banner-color);
-    text-align: center;
-    top: 0;
-    z-index: 999;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 0 1fr 4fr 0;
-    min-height: 95px;
+header {
+  background-color: var(--banner-color);
+  text-align: center;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0 1fr 4fr 0;
+  min-height: 95px;
 }
-.icon{
-    grid-column: 2 / span 1;
+.icon {
+  grid-column: 2 / span 1;
 }
-.icon img{
-    margin: 0.5em;
-    width: 75px;
-    height: auto;
-    border-radius: 10%;
+.icon img {
+  margin: 0.5em;
+  width: 75px;
+  height: auto;
+  border-radius: 10%;
 }
-nav{
-    margin-right: 2em;
-    display: flex;
-    grid-column: 3 / span 1;
-    align-items: center;
-    justify-content: flex-end;
+nav {
+  margin-right: 2em;
+  display: flex;
+  grid-column: 3 / span 1;
+  align-items: center;
+  justify-content: flex-end;
 }
-nav ul{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    list-style: none;
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
 }
-nav li{
-    margin: 0 1em;
-    position: relative;
+nav li {
+  margin: 0 1em;
+  position: relative;
 }
-nav li a{
-    color: var(--main-text-color);
-    text-decoration: none;
-    text-transform: uppercase;
+nav li a {
+  color: var(--main-text-color);
+  text-decoration: none;
+  text-transform: uppercase;
 }
-
 
 /*Page Common Styles*/
-h1{
-    color: var(--main-text-color);
-    text-align: center;
+h1 {
+  color: var(--main-text-color);
+  text-align: center;
 }
-h2{
-    text-align: center;
+h2 {
+  text-align: center;
 }
-.button{
-    cursor: pointer;
-    text-decoration: none;
-    color: var(--main-text-color);
-    background-color: var(--main-color);
-    padding: 0.5em 1.25em;
-    border-radius: .25em;
+.button {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--main-text-color);
+  background-color: var(--main-color);
+  padding: 0.5em 1.25em;
+  border-radius: 0.25em;
 }
 .button:hover,
-.button:focus{
-    background-color: var(--accent-color);
+.button:focus {
+  background-color: var(--accent-color);
 }
 p a {
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
-
 
 /*Project Page Styles*/
 /*Project Card Styles*/
-.card{
-    padding: 10rem 0 0;
-    max-width: 35ch;
-    border-radius: .5em;
-    overflow: hidden;
-    outline: 1px solid var(--card-outline);
+.card {
+  padding: 10rem 0 0;
+  max-width: 35ch;
+  border-radius: 0.5em;
+  overflow: hidden;
+  outline: 1px solid var(--card-outline);
 }
-.card-content{
-    --padding: 1.5rem;
-    padding: var(--padding);
-    background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.6) 20%, rgba(0,0,0,1));
-
+.card-content {
+  --padding: 1.5rem;
+  padding: var(--padding);
+  background: linear-gradient(
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.6) 20%,
+    rgba(0, 0, 0, 1)
+  );
 }
-.card-title{
-    position: relative;
-    width: max-content;
+.card-title {
+  position: relative;
+  width: max-content;
 }
-.card-title::after{
-    content: '';
-    position: absolute;
-    height: 3px;
-    left: calc(var(--padding) * -1);
-    bottom: -0.25em;
-    width: calc(100% + var(--padding));
-    background: var(--main-color);
+.card-title::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  left: calc(var(--padding) * -1);
+  bottom: -0.25em;
+  width: calc(100% + var(--padding));
+  background: var(--main-color);
 }
-.card-body{
-    opacity: 90%;
+.card-body {
+  opacity: 90%;
 }
-.card-holder{
-    margin: .8rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(315px,1fr));
-    column-gap: .5rem;
-    row-gap: 1rem;
-    justify-items: center;
+.card-holder {
+  margin: 0.8rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
+  column-gap: 0.5rem;
+  row-gap: 1rem;
+  justify-items: center;
 }
-
 
 /*Individual Card Backgrounds*/
-#rpg-quest{
-    background-image: url(./files/images/resize/tim-rebkavets-B5PNmw5XSpk-unsplash_med.jpg);
-    background-size: cover;
-    background-position: center;
+#rpg-quest {
+  background-image: url(./files/images/resize/tim-rebkavets-B5PNmw5XSpk-unsplash_med.jpg);
+  background-size: cover;
+  background-position: center;
 }
-#portfolio{
-    background-image: url(./files/images/resize/florian-olivo-4hbJ-eymZ1o-unsplash_med.jpg);
-    background-size: cover;
-    background-position: center;
+#portfolio {
+  background-image: url(./files/images/resize/florian-olivo-4hbJ-eymZ1o-unsplash_med.jpg);
+  background-size: cover;
+  background-position: center;
 }
-#placeholder{
-    background-image: url(./files/images/resize/DSC_0046_med.JPG);
-    background-size: cover;
-    background-position: center;
+#watchlist {
+  background-image: url(./files/images/resize/redd-wPMvPMD9KBI-unsplash_med.jpg);
+  background-size: cover;
+  background-position: center;
 }
-
+#placeholder {
+  background-image: url(./files/images/resize/DSC_0046_med.JPG);
+  background-size: cover;
+  background-position: center;
+}
 
 /*About Me Page Styles*/
-.about p{
-    margin: 1.5em;
-    text-align: justify;
+.about p {
+  margin: 1.5em;
+  text-align: justify;
 }
 /*Skill styles*/
 .skills {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(115px,1fr));
-    grid-gap: .5rem;
-    justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
+  grid-gap: 0.5rem;
+  justify-items: center;
 }
-.single-skill{
-    padding-top: 0.5em;
-    background-color: var(--skill-bg);
-    border-radius: 5px;
-    outline: 1px solid var(--banner-color);
+.single-skill {
+  padding-top: 0.5em;
+  background-color: var(--skill-bg);
+  border-radius: 5px;
+  outline: 1px solid var(--banner-color);
 }
-.single-skill p{
-    margin-top: 0.5em;
-    text-align: center;
+.single-skill p {
+  margin-top: 0.5em;
+  text-align: center;
 }
-.icons8{
-    text-align: center;
+.icons8 {
+  text-align: center;
 }
 /*Contact Styles*/
-.contact{
-    margin-top: 4rem;
+.contact {
+  margin-top: 4rem;
 }
-.contact p{
-    text-align: center;
+.contact p {
+  text-align: center;
 }
-
 
 /*Non-Mobile Styles*/
 /*Full Size Desktop Styles*/
 @media screen and (min-width: 1050px) {
-    header{
-        grid-template-columns: 1fr 1fr 4fr 1fr;
-    }
-    .card-holder{
-        max-width: 1050px;
-        margin: 0.8rem auto;
-    }
-    .about{
-        max-width: 1050px;
-        margin: 1.5em auto;
-    }
-    .skills{
-        max-width: 1050px;
-        margin: 0.8rem auto;
-    }
+  header {
+    grid-template-columns: 1fr 1fr 4fr 1fr;
+  }
+  .card-holder {
+    max-width: 1050px;
+    margin: 0.8rem auto;
+  }
+  .about {
+    max-width: 1050px;
+    margin: 1.5em auto;
+  }
+  .skills {
+    max-width: 1050px;
+    margin: 0.8rem auto;
+  }
 }
 /*Prefers Motion: no preference (defaults to no animations)*/
-@media (hover: hover) and (prefers-reduced-motion: no-preference){
-    /*Nav Bar Highlights*/    
-    nav li::before,
-    nav li::after{
-        content: '';
-        position: absolute;
-        height: 2px;
-        width: 100%;
-        background-color: var(--accent-color);
-    }
-    nav li::before{
-        right: 0;
-        top: -0.25em;
-    }
-    nav li::after{
-        left: 0;
-        bottom: -0.25em;
-    }
-    nav li::before,
-    nav li::after{
-        transform: scaleX(0);
-        transition: transform 500ms ease;
-    }
-    nav li:hover::before,
-    nav li:hover::after,
-    nav li:focus-within::before,
-    nav li:focus-within::after{
-        transform: scaleX(1);
-    }
-    nav li:nth-child(1)::before,
-    nav li:nth-child(1)::after{
-        transform-origin: right;
-    }
-    nav li:nth-child(2)::before,
-    nav li:nth-child(2)::after{
-        transform-origin: left;
-    }
-    /*Project Card Animations*/
-    .card {
-        transition: transform 350ms ease;
-    }
-    .card:hover,
-    .card:focus-within{
-        transform: scale(1.05);
-    }
-    .card-title::after{
-        transform: scaleX(0);
-        transition: transform 350ms ease;
-        transition-delay: 500ms;
-        transform-origin: left;
-    }
-    .card:hover .card-title::after,
-    .card:focus-within .card-title::after{
-        transform: scaleX(1)
-    }
-    .card-content{
-        transform: translateY(65%);
-        transition: transform 350ms ease;
-    }
-    .card:hover .card-content,
-    .card:focus-within .card-content{
-        transform: translateY(0)
-    }
-    .card-body,
-    .card-content a{
-        opacity: 0;                
-        transition: opacity 350ms linear;
-    }
-    .card:hover .card-body,
-    .card:focus-within .card-body,
-    .card:hover .card-content a,
-    .card:focus-within .card-content a{
-        opacity: 1;
-        transition-delay: 500ms;
-    }
-    .card:focus-within .card-content{
-        transition-duration: 0ms;
-    }
-
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  /*Nav Bar Highlights*/
+  nav li::before,
+  nav li::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: var(--accent-color);
+  }
+  nav li::before {
+    right: 0;
+    top: -0.25em;
+  }
+  nav li::after {
+    left: 0;
+    bottom: -0.25em;
+  }
+  nav li::before,
+  nav li::after {
+    transform: scaleX(0);
+    transition: transform 500ms ease;
+  }
+  nav li:hover::before,
+  nav li:hover::after,
+  nav li:focus-within::before,
+  nav li:focus-within::after {
+    transform: scaleX(1);
+  }
+  nav li:nth-child(1)::before,
+  nav li:nth-child(1)::after {
+    transform-origin: right;
+  }
+  nav li:nth-child(2)::before,
+  nav li:nth-child(2)::after {
+    transform-origin: left;
+  }
+  /*Project Card Animations*/
+  .card {
+    transition: transform 350ms ease;
+  }
+  .card:hover,
+  .card:focus-within {
+    transform: scale(1.05);
+  }
+  .card-title::after {
+    transform: scaleX(0);
+    transition: transform 350ms ease;
+    transition-delay: 500ms;
+    transform-origin: left;
+  }
+  .card:hover .card-title::after,
+  .card:focus-within .card-title::after {
+    transform: scaleX(1);
+  }
+  .card-content {
+    transform: translateY(65%);
+    transition: transform 350ms ease;
+  }
+  .card:hover .card-content,
+  .card:focus-within .card-content {
+    transform: translateY(0);
+  }
+  .card-body,
+  .card-content a {
+    opacity: 0;
+    transition: opacity 350ms linear;
+  }
+  .card:hover .card-body,
+  .card:focus-within .card-body,
+  .card:hover .card-content a,
+  .card:focus-within .card-content a {
+    opacity: 1;
+    transition-delay: 500ms;
+  }
+  .card:focus-within .card-content {
+    transition-duration: 0ms;
+  }
 }
 /*End Prefers Motion Section*/
