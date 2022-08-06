@@ -161,6 +161,11 @@ p a {
   background-size: cover;
   background-position: center;
 }
+#sign-language {
+  background-image: url(./files/images/resize/nick-HHGYTN39Gsw-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+}
 #placeholder {
   background-image: url(./files/images/resize/DSC_0046_med.JPG);
   background-size: cover;
